@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="icon/m.ico">
+
+	<title>Monggogo Toeic - Examination manager</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css'>
+
+	<!-- Cài đặt Font Awesome-->
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+	<!-- Boostrap table -->
+	<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.0/bootstrap-table.min.css'>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<link href="css/header-footer.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 0 10px">
+		<a class="navbar-brand" href="index.html"><img src="icon/logo.png" height="50px" style="margin-left: 30px"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse lead" id="navbar">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="exam-manager-info%20%5Bexam-manager%5D.html">INFO<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="exams%20%5Bexam-manager%5D.html">EXAM MANAGEMENT<span class="sr-only"></span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">LOGOUT</a>
+				</li>
+			</ul>
+			<div id="imaginary_container">
+				<div class="input-group stylish-input-group input-append">
+					<input type="text" class="form-control" placeholder="Search">
+					<span class="input-group-addon">
+                        <button type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>  
+                    </span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Add examination -->
+	<main role="main" class="container exam" id="add-exam">
+		<div  class="text-center">
+			<img id="pic-title" src="images/edit-exam.png" width="500px">
+		</div>
+		
+
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<div>
+					<h4 class="breadcrumbh5" id="part" style="margin-top: 10px">
+						<span>LISTENING TEST</span>
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+						<span>PART 1</span>
+					</h4>
+
+					<div class="form-group row">
+						<label class="col-2 col-form-label">Audio: </label>
+						<div class="col-9">
+							<label class="custom-file">
+								<input type="file" id="file" class="custom-file-input" required>
+								<span class="custom-file-control"></span>
+							</label>
+						</div>
+					</div>
+
+					<div id="ques1">
+						<div class="bd-callout bd-callout-danger news">
+
+							<h5>Question 1.</h5>
+							<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+
+							</script>
+						</div>
+
+						<section class="option">
+							<ul class="list">
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">A</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">B</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">C</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">D</label>
+								</li>
+							</ul>
+						</section>
+					</div>
+
+					<div id="ques2">
+						<div class="bd-callout bd-callout-danger news">
+
+							<h5>Question 2.</h5>
+							<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+
+							</script>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo1">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo1">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo1">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo1">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+
+
+						<div id="ques3">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 3.</h5>
+								<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+								<div id="part1-toeic" class="form-control">
+									<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+									<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+								</div>
+
+								<script>
+									$(document).ready(
+										function() {
+											$("#show-ques1").change(
+												function() {
+													$("#show-ques1 option:selected").each(
+														function() {
+															$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+														}
+													); //endeach
+												}
+											); //endchange
+										}
+									);
+
+								</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo3">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo3">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo3">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo3">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques4">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 4.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo4">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo4">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo4">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo4">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques5">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 5.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo5">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo5">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo5">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo5">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques6">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 6.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo6">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo6">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo6">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo6">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques7">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 7.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo7">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo7">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo7">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo7">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques8">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 8.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo8">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo8">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo8">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo8">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+
+						<div id="ques9">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 9.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo9">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo9">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo9">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo9">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<div id="ques10">
+							<div class="bd-callout bd-callout-danger news">
+								<h5>Question 10.</h5>
+															<select class="form-control part1-toeic" id="show-ques1">
+								<option>Pic1</option>
+								<option>Pic2</option>
+							</select>
+
+							<div id="part1-toeic" class="form-control">
+								<img src="http://3.bp.blogspot.com/-2dNrIQcLNng/VrB6imgiwcI/AAAAAAAAKrI/7-UWi5psenE/s1600/Toeic-Speaking-Bai-2-P-2-mo-ta-tranh-01.jpg" class="img-fluid rounded pix" id="Pic1">
+
+								<img src="http://coh.ukzn.ac.za/Libraries/news_thumbs/shutterstock_15590896.sflb.ashx" class="img-fluid rounded pix" id="Pic2">
+							</div>
+
+							<script>
+								$(document).ready(
+									function() {
+										$("#show-ques1").change(
+											function() {
+												$("#show-ques1 option:selected").each(
+													function() {
+														$('.pix').hide().filter('#' + $(this).text()).fadeIn();
+													}
+												); //endeach
+											}
+										); //endchange
+									}
+								);
+							</script>
+							</div>
+
+							<section class="option">
+								<ul class="list">
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo10">A</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo10">B</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo10">C</label>
+									</li>
+									<li class="list__item">
+										<label class="label--radio"><input type="radio" class="radio" name="foo10">D</label>
+									</li>
+								</ul>
+							</section>
+						</div>
+
+						<section class="option">
+							<ul class="list">
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">A</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">B</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">C</label>
+								</li>
+								<li class="list__item">
+									<label class="label--radio"><input type="radio" class="radio" name="foo1">D</label>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+
+				<!-- Thanh Pagination -->
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-1%20%5Bexam-manager%5D.html">1</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-2%20%5Bexam-manager%5D.html">2</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-3%20%5Bexam-manager%5D.html">3</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-4%20%5Bexam-manager%5D.html">4</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-5%20%5Bexam-manager%5D.html">5</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-6%20%5Bexam-manager%5D.html">6</a></li>
+						<li class="page-item"><a class="page-link" href="add-exam-7%20%5Bexam-manager%5D.html">7</a></li>
+						<li class="page-item"><a class="page-link" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="accordion" role="tablist" class="col-sm-3 ml-sm-auto ">
+
+				<!-- Thông tin đề thi -->
+				<div class="card">
+					<div class="card-header" role="tab" id="headingOne">
+						<h5 class="mb-0">
+							<a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Infomation</a>
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							<form id="exam-info" novalidate>
+								<div class="form-group">
+									<label for="inputExamID">Examination ID: </label>
+									<input type="text" class="form-control" id="inputID" placeholder="" required>
+									<div class="invalid-feedback">
+										Please provide a valid exam ID.
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputExamName">Examination name: </label>
+									<input type="text" class="form-control" id="inputExamName" placeholder="Untitle Examnination" required>
+									<div class="invalid-feedback">
+										Please provide a valid exam name.
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputTime">Time: </label>
+									<input type="time" class="form-control" id="inputTime" placeholder="" required>
+								</div>
+								<div class="form-group">
+									<label for="inputDate">Date: </label>
+									<input type="date" class="form-control" id="inputDate" placeholder="Untitle Examnination" required>
+								</div>
+
+								<button class="btn btn-primary text-right" type="submit">Submit</button>
+							</form>
+
+							<script>
+								// Example starter JavaScript for disabling form submissions if there are invalid fields
+								(function() {
+									'use strict';
+
+									window.addEventListener('load', function() {
+										var form = document.getElementById('exam-info');
+										form.addEventListener('submit', function(event) {
+											if (form.checkValidity() === false) {
+												event.preventDefault();
+												event.stopPropagation();
+											}
+											form.classList.add('was-validated');
+										}, false);
+									}, false);
+								})();
+
+							</script>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer id=contact>
+		<div class="splitter"></div>
+		<ul>
+			<li>
+				<div class="text">
+					<h4>MONGGOGO TOEIC</h4>
+					<div>
+						<p class="lead"><i class="fa fa-map" aria-hidden="true" style="padding-right: 12px"></i>Address: 1040 Vo Van Ngan, Thu Duc District, HCMC</p>
+						<p class="lead"><i class="fa fa-address-book" aria-hidden="true" style="padding-right: 12px"></i>Phone: (088) 6677022</p>
+						<p class="lead"><i class="fa fa-envelope-open" aria-hidden="true" style="padding-right: 12px"></i>Email: monggogotoeic@edu.vn</p>
+						<a href="#">Read more...</a></div>
+				</div>
+			</li>
+
+			<li>
+				<div class="text">
+					<h4>SOCIAL</h4>
+					<p class="lead social-icons">Connect us:
+						<a href=""> <i class="fa fa-facebook-square"></i></a>
+						<a href="" class="tw"> <i class="fa fa-twitter-square"></i></a>
+						<a href="" class="rs"> <i class="fa fa-rss-square"></i></a>
+						<a href="" class="yt"> <i class="fa fa-youtube-square"></i></a>
+						<a href="" class="li"> <i class="fa fa-linkedin-square"></i></a>
+						<a href="" class="gp"> <i class="fa fa-google-plus-square"></i></a>
+					</p>
+
+
+					<p class="lead">Please rate your overall experience:</p>
+					<fieldset class="rating">
+						<input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+						<input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+						<input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+						<input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+						<input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+						<input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+						<input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+						<input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+						<input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+						<input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+					</fieldset>
+
+				</div>
+			</li>
+		</ul>
+
+		<div class="bar">
+			<div class="clear"></div>
+			<div class="copyright lead">&copy; 2017 Monggogo Toeic All Rights Reserved</div>
+		</div>
+	</footer>
+
+
+
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="./Carousel Template for Bootstrap_files/jquery-3.2.1.slim.min.js.download" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script>
+		window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')
+
+	</script>
+	<script src="./Carousel Template for Bootstrap_files/popper.min.js.download"></script>
+	<script src="./Carousel Template for Bootstrap_files/bootstrap.min.js.download"></script>
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<script src="./Carousel Template for Bootstrap_files/holder.min.js.download"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="./Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.js.download"></script>
+
+</body>
+
+</html>

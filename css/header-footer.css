@@ -1,0 +1,353 @@
+/********* Header *********/
+
+.navbar-brand {
+	font-size: 20px;
+	color: #05984f;
+}
+
+.menu-home li {
+	display: inline-block;
+	width: 130px;
+	height: 50px;
+	line-height: 50px;
+	/*bằng height để canh giữa*/
+	position: relative;
+}
+
+.menu-std li {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	/*bằng height để canh giữa*/
+	position: relative;
+}
+
+#navbar a {
+	padding: 20px;
+
+	text-align: center;
+	text-decoration: none;
+	/*bỏ under line*/
+	color: #fff;
+	font-size: 20px;
+	display: block;
+}
+
+#navbar a:hover {
+	background-color: #05984f;
+	transition: 0.75s
+}
+
+.stylish-input-group .input-group-addon {
+	background: white !important;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+.stylish-input-group .form-control {
+	border-right: 0;
+	border-color: #ccc;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.stylish-input-group button {
+	border: 0;
+	background: transparent;
+}
+
+
+
+
+/********* Footer *********/
+
+.clear {
+	clear: both;
+}
+
+.contact-footer i {
+	margin-right: 10px;
+}
+
+footer {
+	background-color: #2e3639;
+	position: relative;
+	z-index: 1;
+}
+
+footer .splitter {
+	background-color: #05984f;
+	height: 8px;
+	margin-top: 75px;
+}
+
+footer > ul {
+	list-style: none outside none;
+	margin: 0 auto;
+	max-width: 1200px;
+	overflow: hidden;
+	padding: 25px 0;
+	position: relative;
+	width: 95%;
+}
+
+footer > ul li {
+	float: left;
+	padding: 20px 0px;
+	width: 48.51%;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+footer > ul li:first-child {
+	padding-left: 0;
+}
+
+footer > ul li:nth-child(3) {
+	padding-right: 0;
+}
+
+footer > ul li .text {
+	color: #a8a8a8;
+	font-size: 12px;
+	line-height: 20px;
+	margin-left: 40px;
+	position: relative;
+	text-align: justify;
+}
+
+.text h4 {
+	color: #fff;
+	font-size: 24px;
+	padding: 12px 0;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.text p {
+	line-height: 30px;
+}
+
+.text h4:hover {
+	color: #05984f;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.text a {
+	border-bottom: 2px dotted transparent;
+	color: #05984f;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+/* Menu */
+
+footer .bar {
+	background-color: #1E2629;
+	padding: 20px 0;
+}
+
+footer .bar-wrap {
+	font-size: 12px;
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+	width: 95%;
+}
+
+.copyright {
+	color: #778888;
+	margin-top: 5px;
+	text-align: center;
+}
+
+
+
+/* Social */
+
+.social-icons a {
+	color: #788;
+	font-size: 40px;
+	text-decoration: none;
+}
+
+.fa-facebook-square {
+	padding: 10px 15px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-facebook-square:hover {
+	background-color: #3d5b99;
+}
+
+.fa-twitter-square {
+	padding: 10px 15px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-twitter-square:hover {
+	background-color: #00aced;
+}
+
+.fa-rss-square {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-rss-square:hover {
+	background-color: #eb8231;
+}
+
+.fa-youtube-square {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-youtube-square:hover {
+	background-color: #e64a41;
+}
+
+.fa-linkedin-square {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-linkedin-square:hover {
+	background-color: #0073a4;
+}
+
+.fa-google-plus-square {
+	padding: 10px 14px;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.fa-google-plus-square:hover {
+	background-color: #e25714;
+}
+
+
+/* Star rating */
+
+.rating {
+	border: none;
+	float: left;
+}
+
+.rating > input {
+	display: none;
+}
+
+.rating > label:before {
+	margin: 5.5px;
+	font-size: 1.7em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+}
+
+.rating > .half:before {
+	content: "\f089";
+	position: absolute;
+}
+
+.rating > label {
+	color: #ddd;
+	float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label,
+/* show gold star when clicked */
+
+.rating:not(:checked) > label:hover,
+/* hover current star */
+
+.rating:not(:checked) > label:hover ~ label {
+	color: #FFD700;
+}
+
+/* hover previous stars in list */
+
+.rating > input:checked + label:hover,
+/* hover current star when changing rating */
+
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+/* lighten current selection */
+
+.rating > input:checked ~ label:hover ~ label {
+	color: #FFED85;
+}
+
+
+
+
+
+
+/* Tạo khả năng Responsive, giúp cho footer có khả năng hiển thị tốt trên mọi kích thước màn hình */
+
+@media screen and (max-width: 1000px) {
+	.links,
+	.social,
+	.copyright {
+		float: none;
+		text-align: center;
+	}
+	.social {
+		position: relative;
+		margin: 10px 0;
+	}
+	.links li {
+		display: inline-block;
+		float: none;
+	}
+	.bar {
+		position: relative;
+	}
+	.bar-wrap {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 835px) {
+	footer > ul li {
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.links li {
+		margin-right: 5px;
+	}
+}
